@@ -58,7 +58,20 @@ public class StudentDatabase {
         }
         return null;
     }
-}
 
     
-     
+     public Student createRecordFrom(String line) {
+        String[] parts = line.split(",");
+        if (parts.length == 6) {
+
+            Student student = new Student(Integer.parseInt(parts[0]),parts[1],Integer.parseInt(parts[2]),parts[3],parts[4],Float.parseFloat(parts[5]));
+            return student;
+        }
+        return null;
+    }
+
+    
+    
+    
+}
+
