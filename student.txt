@@ -1,0 +1,6 @@
+1001,OmarKhaled,21,Male,ComputerEngineering,3.75
+1002,SaraAhmed,20,Female,ElectricalEngineering,3.9
+1003,AliHassan,22,Male,MechanicalEngineering,3.4
+1004,MonaYoussef,19,Female,CivilEngineering,3.85
+1005,KarimAdel,23,Male,SoftwareEngineering,3.6
+12,omar,12,null,omar,12.0

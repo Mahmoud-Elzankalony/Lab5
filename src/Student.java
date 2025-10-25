@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
-package com.mycompany.student;
 
-/**
- *
- * @author pc
- */
+
+
+
 public class Student {
 
     private int studentID;
@@ -15,9 +10,9 @@ public class Student {
     private int age;
     private String gender;
     private String department;
-    private double GPA;
+    private float GPA;
 
-    public Student(int studentID, String fullName, int age, String gender, String department, double GPA) 
+    public Student(int studentID, String fullName, int age, String gender, String department, float GPA) 
     {
         
         this.studentID = studentID;
@@ -64,7 +59,7 @@ public class Student {
         
     }
 
-    public double getGPA()
+    public float getGPA()
     {
         
         return GPA;
@@ -106,7 +101,7 @@ public class Student {
         
     }
 
-    public void setGPA(double GPA) 
+    public void setGPA(float GPA) 
     {
         
         this.GPA = GPA;
