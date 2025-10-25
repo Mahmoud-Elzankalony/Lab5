@@ -93,7 +93,48 @@ public class StudentDatabase {
         return false;
     }
 
+    public boolean  AddStudent(Student student)
+    {
+       if(SearchStudent(student.getStudentID())==null)
+        {
+            this.records.add(student);
+            
+            return true;
+            
+        }
+       return false;
+    }
+
+     public void saveToFile() throws Exception
+    {
+        FileWriter file = new FileWriter(filename);
+        for(int i=0;i<records.size();i++)
+        {
+            file.write(( records.get(i)).lineRepresentationOfStudent()+"\n");
+        }
+        file.close();
+    }
     
+
+    public void  UpdateStudent(String choise,int UpdatedValue,int ID)
+    {
+       
+        if(choise.equalsIgnoreCase("id"))
+        {
+         SearchStudent(ID).setStudentID(UpdatedValue);
+        }
+        
+        else if(choise.equalsIgnoreCase("gpa"))
+        {
+            SearchStudent(ID).setGPA(UpdatedValue);
+        }
+
+        else if(choise.equalsIgnoreCase("age"))
+        {
+            SearchStudent(ID).setStudentID(UpdatedValue);
+        }
+        
+    }
     
     
 }
