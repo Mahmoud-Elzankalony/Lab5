@@ -32,6 +32,7 @@ public class StudentDatabase {
             String line = br.readLine();
             records.clear();
             while (line != null) {
+                
                 records.add(createRecordFrom(line));
                 
                 line = br.readLine();
@@ -86,19 +87,29 @@ public class StudentDatabase {
         {
             if((records.get(i)).getStudentID()==ID)
             {
-                records.remove(records.get(i));
-                return true ;
+                try {
+                    this.records.remove(records.get(i));
+                    saveToFile();
+                    return true;
+                } catch (Exception e) {
+                    return false;
+                }
             }
         }
         return false;
     }
 
-    public boolean  AddStudent(Student student)
+    public boolean  AddStudent(Student student) 
     {
        if(SearchStudent(student.getStudentID())==null)
         {
-            this.records.add(student);
             
+            try {
+                this.records.add(student);
+                saveToFile();
+            } catch (Exception e) {
+                return false;
+            }
             return true;
             
         }
