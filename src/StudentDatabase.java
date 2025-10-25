@@ -79,7 +79,22 @@ public class StudentDatabase {
     }
 
 
-   
+    public boolean DeleteStudent(int ID)
+    {
+        
+        for(int i=0;i<records.size();i++)
+        {
+            if((records.get(i)).getStudentID()==ID)
+            {
+                records.remove(records.get(i));
+                return true ;
+            }
+        }
+        return false;
+    }
+
+    
+    
     
 }
 
