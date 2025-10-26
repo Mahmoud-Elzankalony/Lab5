@@ -146,7 +146,9 @@ public class StudentDatabase {
         }
         
     }
-    
-    
+
+    public ArrayList<Student> ReturnAllStudents() {
+        return records;
+    }
 }
 
